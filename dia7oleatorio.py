@@ -13,16 +13,26 @@ print(aleatorio)  #imprimimos el numero generado
 #escribir una funcion sorteo() que reciba
 #una lista de participantes, y elegir a uno de los
 #participantes aleatoriamente, y retornar esa persona elegida
+"""
+from random import randint #importamos la libreria randint
+def sorteo(lista_participantes): #definimos una funcion
+    cant=len(lista_participantes) #utilizamos len para saber 
+    #la cantidad de lista y guardamos en cant
+    ganador=randint(0,cant) #generamos un indice aleatorio
+    return lista_participantes[ganador] #retornamos la lista
 
+lista_participantes=["lili","gustavo","Jazmin","fernando"]
+ganador=sorteo(lista_participantes) #seleccionamos un elemento de la lista y guardamos
+print(ganador)
+ """
+
+#Desafio: no volver a una persona ya sorteada
 from random import randint 
 def sorteo(lista_participantes):
-    cant=len(lista_participantes)
+    cant=len(lista_participantes)-1 
     ganador=randint(0,cant)
-return lista_participantes[ganador]
+    return lista_participantes[ganador]
+
 lista_participantes=["lili","gustavo","Jazmin","fernando"]
 ganador=sorteo(lista_participantes)
 print(ganador)
- 
-
-
-#Desafio: no volver a una persona ya sorteada
